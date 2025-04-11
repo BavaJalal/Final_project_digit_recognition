@@ -15,6 +15,7 @@ function setupDrawing(canvas, ctx) {
 
   canvas.addEventListener("mousemove", (e) => {
     if (!drawing) return;
+
     const rect = canvas.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
@@ -36,7 +37,7 @@ document.getElementById("predictBtn").addEventListener("click", async () => {
     document.getElementById("prediction").innerText = "Processing...";
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/predict", {
+      const response = await fetch(window.location.origin + "/predict", {
         method: "POST",
         body: formData
       });
