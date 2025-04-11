@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Digit Recognition</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Digit Recognition</h1>
+      <label class="switch">
+        <input type="checkbox" id="darkModeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <canvas id="canvas" width="280" height="280"></canvas>
+
+    <div class="buttons">
+      <button id="clearBtn">Clear</button>
+      <button id="predictBtn">Predict</button>
+    </div>
+
+    <div class="result">
+      <div id="loader" class="hidden"></div>
+      <p>Prediction: <span id="prediction">None</span></p>
+    </div>
+  </div>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

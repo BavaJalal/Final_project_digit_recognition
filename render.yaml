@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: digit-recognizer
+    env: python
+    plan: free
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: ./start.sh
+    runtime: python
+    region: oregon
+    branch: main
+    autoDeploy: true
